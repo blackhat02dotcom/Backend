@@ -48,7 +48,7 @@ app.post('/register', async (req, res) => {
 app.post('/login', async (req, res) => {
     const { username, password } = req.body;
     const user = await User.findOne({ username });
-
+// my C java script
     if (!user) {
         console.log("User not found:", username);
         return res.status(400).json({ message: 'User not found' });
